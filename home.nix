@@ -7,8 +7,11 @@ in {
   home.homeDirectory = "/home/apo";
   home.stateVersion = "23.11";
 
+  nixpkgs.config.allowUnfree = true;
+
   # Εδώ θα προσθέτουμε τα νέα αρχεία που φτιάχνουμε
   imports = [
+    ./modules/packages.nix
     ./modules/git.nix
   ];
 

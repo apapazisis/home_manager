@@ -20,4 +20,4 @@ mkdir -p /etc/nix/nix.conf
 
 3. Στο flake.nix ορίζουμε 
 
-nix-shell -p home-manager --run "home-manager switch -b backup --flake .#default --impure"
+nix-shell -p home-manager --run "home-manager switch -b backup --flake .#apo --impure"
