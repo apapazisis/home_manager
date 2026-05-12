@@ -23,6 +23,11 @@ mkdir -p /etc/nix/nix.conf
 - Τα Outputs είναι το τελικό αποτέλεσμα που παράγει το flake σου, ορίζοντας πώς οι πηγές (Inputs) μετατρέπονται σε συγκεκριμένες ρυθμίσεις, πακέτα ή περιβάλλοντα χρήστη
   
 
-
-4. 
-nix-shell -p home-manager --run "home-manager switch -b backup --flake .#apo --impure"
+4. Η εντολή για να δημιουργηθεί το περιβάλλον είναι
+```
+nix-shell -p home-manager --run "home-manager switch -b backup --flake . --impure"
+```
+Αν το repository μας το κάνουμε clone στο ~/.config/home-manager τότε η εντολή ειναι:
+```
+nix-shell -p home-manager --run "home-manager switch -b backup --impure"
+```
