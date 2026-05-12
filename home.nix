@@ -3,7 +3,7 @@
 let
     username = builtins.getEnv "USER";
 in {
-  home.username = "apo";
+  home.username = username;
   home.homeDirectory = "/home/apo";
   home.stateVersion = "23.11";
 

@@ -18,6 +18,11 @@ mkdir -p ~/.config/nix
 mkdir -p /etc/nix/nix.conf
 ```
 
-3. Στο flake.nix ορίζουμε 
+3. Στο flake.nix ορίζουμε τα inputs και τα outputs. 
+- Τα Inputs είναι οι εξωτερικές πηγές από τις οποίες το Flake σου αντλεί κώδικα και πακέτα.
+- Τα Outputs είναι το τελικό αποτέλεσμα που παράγει το flake σου, ορίζοντας πώς οι πηγές (Inputs) μετατρέπονται σε συγκεκριμένες ρυθμίσεις, πακέτα ή περιβάλλοντα χρήστη
+  
 
+
+4. 
 nix-shell -p home-manager --run "home-manager switch -b backup --flake .#apo --impure"
